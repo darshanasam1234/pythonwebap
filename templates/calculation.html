@@ -1,0 +1,24 @@
+<!-- templates/calculation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculation</title>
+</head>
+<body>
+    <h1>Simple Calculation</h1>
+    <form method="POST" action="/calculate">
+        <label for="num1">Enter Number 1:</label>
+        <input type="number" name="num1" required>
+        <br>
+        <label for="num2">Enter Number 2:</label>
+        <input type="number" name="num2" required>
+        <br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
